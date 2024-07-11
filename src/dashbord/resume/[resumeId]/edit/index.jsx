@@ -16,6 +16,8 @@ const EditResume = () => {
         getResumeInfo()
     }, [])
 
+    
+
     const getResumeInfo = async () => {
         try {
             const resp = await GlobalApi.GetResumeById(resumeId);
@@ -29,6 +31,8 @@ const EditResume = () => {
 
         }
     }
+    console.log(resumeId)
+    console.log(resumeInfo)
     return (
         <ResumeInfoContext.Provider value={{ resumeInfo, setResumeInfo }}>
             <div className=' grid grid-cols-1 md:grid-cols-2 p-10 gap-10'>

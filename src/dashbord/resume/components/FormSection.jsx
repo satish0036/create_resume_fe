@@ -36,7 +36,7 @@ const FormSection = () => {
 
   return (
     <div>
-      <div className=' flex justify-between'>
+      <div className=' flex flex-wrap gap-2 justify-between'>
         <Button variant="outline" className=" flex gap-2 " size="sm"> {resumeName}</Button>
 
         <ThemeColor />
@@ -82,7 +82,7 @@ const FormSection = () => {
       }
       {/* Skill */}
       {
-        activeIndex === 7 && <Navigate to={"/my-resume/" + resumeId + "/view"} />
+        activeIndex === 7 && <Navigate to={"/my-resume/"+resumeId+"/view"} />
       }
     </div>
   )

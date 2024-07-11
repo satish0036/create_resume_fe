@@ -7,7 +7,10 @@ const Header = () => {
   const { user, isSignedIn } = useUser()
   return (
     <div className=' p-3 px-5 flex justify-between shadow-md'>
-      <img src='/logo.svg' alt='logo' />
+        <Link to={"/"} >
+        <img  src='/logo.svg' alt='logo' />
+            </Link>
+      
       {
         isSignedIn ?
           <div className=' flex justify-center items-center gap-3'>

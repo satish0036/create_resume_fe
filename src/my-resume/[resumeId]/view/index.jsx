@@ -1,4 +1,4 @@
-
+import Header from '@/components/custom/Header'
 import { Button } from '@/components/ui/button'
 import { ResumeInfoContext } from '@/context/ResumeInfoContext'
 import ResumePreview from '@/dashbord/resume/components/ResumePreview'
@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import GlobalApi from '@/serverAction/GlobalApi'
 import { RWebShare } from 'react-web-share'
-import Header from '@/components/custom/Header'
+
 import ResumePreview1 from '@/dashbord/resume/components/ResumePreview1'
 
 function ViewResume() {
@@ -20,7 +20,7 @@ function ViewResume() {
     const GetResumeInfo = () => {
         GlobalApi.GetResumeById(resumeId).then(resp => {
             // console.log(resp.data.data);
-            setResumeInfo(resp.data.data);
+            setResumeInfo(resp?.data?.data);
         })
     }
 
@@ -41,7 +41,7 @@ function ViewResume() {
                     <div className='flex justify-between px-44 my-10'>
                         <Button onClick={HandleDownload}>Download</Button>
 
-                        <RWebShare
+                        {/* <RWebShare
                             data={{
                                 text: "Hello Everyone, This is my resume please open url to see it",
                                 url: import.meta.env.VITE_BASE_URL + "/my-resume/" + resumeId + "/view",
@@ -49,7 +49,7 @@ function ViewResume() {
                             }}
                             onClick={() => console.log("shared successfully!")}
                         > <Button>Share</Button>
-                        </RWebShare>
+                        </RWebShare> */}
                     </div>
                 </div>
 

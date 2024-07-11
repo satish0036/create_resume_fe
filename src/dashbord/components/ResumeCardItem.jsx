@@ -50,7 +50,7 @@ function ResumeCardItem({ resume, refreshData }) {
     return (
 
         <div className=''>
-            <Link to={'/dashbord/resume/' + resume.resumeId + "/edit"}>
+            <Link to={'/dashbord/resume/'+resume.resumeId+"/edit"}>
                 <div className='p-14  bg-gradient-to-b from-pink-100 via-purple-200 to-blue-200  h-[280px] rounded-t-lg border-t-4'
                     style={{borderColor: resume?.themeColor}}
                 >
@@ -72,9 +72,9 @@ function ResumeCardItem({ resume, refreshData }) {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
 
-                        <DropdownMenuItem onClick={() => navigation('/dashbord/resume/' + resume.resumeId + "/edit")}>Edit</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => navigation('/my-resume/' + resume.resumeId + "/view")}>View</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => navigation('/my-resume/' + resume.resumeId + "/view")}>Download</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => navigation('/dashbord/resume/'+resume.resumeId +"/edit")}>Edit</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => navigation('/my-resume/'+resume.resumeId+"/view")}>View</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => navigation('/my-resume/'+resume.resumeId+"/view")}>Download</DropdownMenuItem>
                         <DropdownMenuItem onClick={() => setOpenAlert(true)}>Delete</DropdownMenuItem>
 
                     </DropdownMenuContent>
