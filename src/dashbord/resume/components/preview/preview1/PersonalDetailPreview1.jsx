@@ -4,7 +4,7 @@ const PersonalDetailPreview1 = ({ resumeInfo }) => {
     return (
         <>
             <div className=' flex  justify-between items-center py-10 px-4 text-white '
-            style={{ background: resumeInfo?.themeColor }}
+            style={{ background: resumeInfo?.themeColor ||"#13354f" }}
             >
                 <div className='flex flex-col justify-start text-sm'>
                     <h2 className='font-normal '

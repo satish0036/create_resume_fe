@@ -15,7 +15,7 @@ const ResumePreview1 = () => {
   return (
     <div className=' '
     style={{
-        borderColor:resumeInfo?.themeColor
+        borderColor:resumeInfo?.themeColor 
     }}
     
     >

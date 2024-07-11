@@ -33,7 +33,7 @@ const Dashbord = () => {
       <p>Start creating resume</p>
       <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5'>
         <AddResume />
-        {resumeList.length > 0 && resumeList.map((resume, index) => (
+        {resumeList?.length > 0 && resumeList.map((resume, index) => (
           <ResumeCardItem resume={resume} key={index} refreshData={GetResumeList} />
         ))}
       </div>
